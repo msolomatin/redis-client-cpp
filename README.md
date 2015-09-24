@@ -1,11 +1,19 @@
-# redis-client-cpp
+#Redis API Client Library for C++
 
-redis-client-cpp is a small C++11 library for Redis. This library
-is at the earliest stage of development. Currently it supports only
+##Description
+Redis API Client LIbrary is a small C++11 library for Redis and allows you to call Redis functions
+directly from your code.
+
+##Alpha
+This library is at the earliest stage of development. Currently it supports only
 SET, GET and PING commands. Library is being developed and tested on Mac OS X 10.10.5.
 
 
-```CPP
+```C++
+#include "Redis.h"
+
+// ...
+
 Redis r("localhost", 6379, "");
 std::cout << r.ping() << std::endl;
 r.set("hello github");
