@@ -8,6 +8,10 @@ directly from your code.
 This library is at the earliest stage of development. Currently it supports only
 SET, GET and PING commands. Library is being developed and tested on Mac OS X 10.10.5.
 
+##Requirements
+C++11 compatible compiler.
+
+##Basic Example
 
 ```C++
 #include "Redis.h"
