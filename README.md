@@ -6,7 +6,7 @@ SET, GET and PING commands. Library is being developed and tested on Mac OS X 10
 
 
 ``Redis r("localhost", 6379, "");
-std::cout << r.ping() << std::endl;
-r.set("hello github");
-std::cout << r.get("hello") << std::endl;
-r.quit();``
+  std::cout << r.ping() << std::endl;
+  r.set("hello github");
+  std::cout << r.get("hello") << std::endl;
+  r.quit();``
