@@ -5,7 +5,7 @@ is at the earliest stage of development. Currently it supports only
 SET, GET and PING commands. Library is being developed and tested on Mac OS X 10.10.5.
 
 
-```
+```CPP
 Redis r("localhost", 6379, "");
 std::cout << r.ping() << std::endl;
 r.set("hello github");
