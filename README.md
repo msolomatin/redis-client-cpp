@@ -1,4 +1,4 @@
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/6455/badge.svg)](https://scan.coverity.com/projects/msolomatin-redis-client-cpp)
+[![Build Status](https://travis-ci.org/msolomatin/redis-client-cpp.svg)](https://travis-ci.org/msolomatin/redis-client-cpp) [![Coverity Scan Build Status](https://scan.coverity.com/projects/6455/badge.svg)](https://scan.coverity.com/projects/msolomatin-redis-client-cpp)
 
 #Redis API Client Library for C++
 
