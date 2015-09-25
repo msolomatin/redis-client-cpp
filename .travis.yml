@@ -32,8 +32,10 @@ install:
 
   - if [ "$CXX" == "clang++" ]; then export CXX="clang++-3.4"; fi
 
-script: 
-  - $CXX redis-client-cpp/src/*.cc -std=c++11
+script:
+  - pwd
+  - ls -la 
+  #- $CXX redis-client-cpp/src/*.cc -std=c++11
 
 branches:
   only:
