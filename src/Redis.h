@@ -2,6 +2,7 @@
 #define REDIS_H
 
 #include <string>
+#include <memory>
 
 class Redis {
 public:
