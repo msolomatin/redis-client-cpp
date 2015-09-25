@@ -34,3 +34,7 @@ install:
 
 script: 
   - $CXX --version
+
+branches:
+  only:
+    - master
