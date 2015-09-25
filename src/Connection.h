@@ -32,7 +32,7 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
-class Redis::Connection {
+class Redis::Connection 
 public:
   Connection();
   Connection(std::string url, int port, std::string password);
