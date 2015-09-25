@@ -3,7 +3,7 @@
 #Redis API Client Library for C++
 
 ##Description
-Redis API Client LIbrary is a small C++11 library for [Redis](http://redis.io/) and allows you to call Redis APIs
+Redis API Client Library is a small C++11 library for [Redis](http://redis.io/) and allows you to call Redis APIs
 directly from your C++ code.
 
 ##Alpha
