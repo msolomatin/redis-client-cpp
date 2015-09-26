@@ -29,8 +29,8 @@
 #include <arpa/inet.h>
 #include <arpa/telnet.h>
 
-#ifndef CONNECTION_H
-#define CONNECTION_H
+#ifndef REDISCLIENTCPP_CONNECTION_H_
+#define REDISCLIENTCPP_CONNECTION_H_
 
 class Redis::Connection {
 public:
@@ -44,4 +44,4 @@ private:
   struct hostent *server;
 };
 
-#endif
+#endif  // REDISCLIENTCPP_CONNECTION_H_

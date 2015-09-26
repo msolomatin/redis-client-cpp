@@ -1,5 +1,5 @@
-#ifndef REDIS_H
-#define REDIS_H
+#ifndef REDISCLIENTCPP_REDIS_H_
+#define REDISCLIENTCPP_REDIS_H_
 
 #include <string>
 #include <memory>
@@ -19,4 +19,4 @@ private:
   class Connection;
   std::unique_ptr<Connection> PConnection;
 };
-#endif
+#endif  // REDISCLIENTCPP_REDIS_H_
