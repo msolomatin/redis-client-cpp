@@ -1,5 +1,5 @@
 
-#include "Redis.h"
+#include "../include/Redis.h"
 #include <string>
 
 #include <stdio.h>

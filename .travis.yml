@@ -40,19 +40,3 @@ script:
 branches:
   only:
     - master
-
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "ojrWZgadwLltW0Bci2WWQYi356ZloA3SOEKQt3mr6X8AqrlmcXkxYVY/v6OO+KdU8enJqrCSQeGLLQCBuXHnPTqqM9dL5SQARgb3xochcjxIBvKeiTn5X7j/uxzi0ZXcRfviFwmKukIsIvWLjjngsCfOkPHfsq+ge9itgukStrK4T6rIFmZfJJjs/e8EpF8niN4h5y6X3ZiyqOQf/m0kAReS1Er3H0lXNYaL9NBzIDePhWYenfSVp//tCT384xkJdm5RyKXDFwBLD/uYx+OS/Fg2hfJ5PI++QpAZcM58mr5WOji93uuSHfO103nSqZMSix2G2zkxaUTzZSYXc1daJ6gkEHAWtbP+GXnKLhQVZ6641zdgMI/7p18CVztro4T9dHNSXFi/y79wyBgr5q4ptmNYUBMnY4bPxU7v5+5mdchPyrOSbgw4tITnbqoT2ujUGY3P8ATF2sG2fMLRLrhbak0TNjQGxoO3YfEtnguYfcBTTCwXWIegraMJXsMb92SDL8YiMuHCEapqd1D/7mHqSJuXzYRMdbP1TsJMVDVCcXdc4LLGxR0giwoJvI+Ma0l2tHlvGOnqDApv2lxducZh9lZ/UOUyGSpAB0cYALeQNqAPHZAD7/iD4tFBWnq0EVbdJ9oA2OmzTCBcH0jbRuZcFErXvHXWE1rXgzaSfsCSB68="
-
-addons:
-  coverity_scan:
-    project:
-      name: "msolomatin/redis-client-cpp"
-      description: "Redis API Client Library for C++"
-    notification_email: m.solomatin@gmail.com
-    build_command_prepend: "pwd"
-    build_command:   "$CXX src/*.cc -std=c++11"
-    branch_pattern: coverity_scan

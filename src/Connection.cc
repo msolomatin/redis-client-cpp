@@ -1,4 +1,4 @@
-#include "Redis.h"
+#include "../include/Redis.h"
 #include "Connection.h"
 #include <iostream>
 
