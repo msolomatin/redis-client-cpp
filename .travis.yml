@@ -35,7 +35,7 @@ install:
 script:
   - pwd
   - ls -la 
-  - $CXX src/*.cc -std=c++11
+  - $CXX -dynamiclib src/*.cc -std=c++11
 
 branches:
   only:
