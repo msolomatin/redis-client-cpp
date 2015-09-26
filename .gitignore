@@ -1,2 +1,4 @@
 src/*.gch
 src/driver.cc
+*.out
+*.so

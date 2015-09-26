@@ -35,7 +35,7 @@ install:
 script:
   - pwd
   - ls -la 
-  - $CXX -dynamiclib src/*.cc -std=c++11
+  - $CXX -shared -undefined dynamic_lookup src/*.cc -std=c++11 -o loki.so
 
 branches:
   only:
