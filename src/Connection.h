@@ -35,10 +35,23 @@
 class Redis::Connection {
 public:
   Connection();
-  Connection(std::string url, int port, std::string password);
-  std::string SendCommand(std::string command);
+  Connection(const std::string &url, const int port, const std::string &password);
+  std::string ping(const std::string &arg);
+  std::string ping();
+  std::string quit();
+  std::string set(const std::string &arg);
+  std::string get(const std::string &key);
+  bool exists(const std::string &args);
 private:
-  void Init(std::string url, int port, std::string password);
+  void Open(const std::string &url, const int port, const std::string &password);
+  std::string SendCommand(std::string command);
+  
+  // Next three helper functions should be in a separate class or namespace,
+  // but I'll leave them here for now
+  bool ToBool(const std::string &response);
+  int ToInt(const std::string &response);
+  std::string ToString(const std::string &response);
+
   int sockfd, portno, n;
   struct sockaddr_in serv_addr;
   struct hostent *server;

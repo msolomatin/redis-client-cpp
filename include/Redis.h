@@ -7,14 +7,15 @@
 class Redis {
 public:
   Redis();
-  Redis(std::string url, int port, std::string password);
+  Redis(const std::string &url, const int port, const std::string &password);
   ~Redis();
 
-  std::string ping(std::string arg);
   std::string ping();
+  std::string ping(const std::string &arg);  
   std::string quit();
-  std::string set(std::string arg);
-  std::string get(std::string key);
+  std::string set(const std::string &arg);
+  std::string get(const std::string &key);
+  bool exists(const std::string &key);
 private:
   class Connection;
   std::unique_ptr<Connection> PConnection;
