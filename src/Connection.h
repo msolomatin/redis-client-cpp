@@ -52,6 +52,10 @@ private:
   int ToInt(const std::string &response);
   std::string ToString(const std::string &response);
 
+  std::string RespBulkStringsToStrings(std::string response);
+  int RespIntegersToIntegers(const std::string &response);
+  std::string RespSimpleStringsToStrings(std::string response);
+  
   int sockfd, portno, n;
   struct sockaddr_in serv_addr;
   struct hostent *server;

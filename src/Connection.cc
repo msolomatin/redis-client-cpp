@@ -98,11 +98,36 @@ std::string Redis::Connection::set(const std::string &arg) {
 
 std::string Redis::Connection::get(const std::string &key) {
   std::string response = SendCommand("GET " + key);
-  return response;
+  return RespBulkStringsToStrings(response);
 }
 
 bool Redis::Connection::exists(const std::string &keys) {
   std::string response = SendCommand("EXISTS " + keys);
   std::cerr << response << std::endl;
   return ToBool(response);
+}
+
+/*
+
+"$6\r\nfoobar\r\n"
+"$0\r\n\r\n"
+"$-1\r\n"
+
+*/
+std::string Redis::Connection::RespBulkStringsToStrings(std::string response) {
+  if (response.length() == 4) {
+    return "";
+  }
+  else if (response.length() == 6) {
+    return "";
+  }
+  int from = 0, to = 0;
+  for (int i = 0; i < response.length(); i++) {
+    if (response[i] == '\n') {
+      from = i + 1;
+      break;
+    }
+  }
+  to = response.length() - 2;
+  return response.substr(from, to - from);
 }
