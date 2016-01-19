@@ -42,5 +42,5 @@ branches:
     - master
 
 notifications:
-  slack:
+  slack: ancoatsteam:vF0FSSCkcVV0C6fSp4c7GjEV
     on_failure: always
